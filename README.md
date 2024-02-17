@@ -1,65 +1,66 @@
-# pseudocode README
+# PseudoCode Syntax Highlighter
 
-This is the README for your extension "pseudocode". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+This is a syntax highlighter for PseudoCode, inspired by popular programming languages such as C, C++, Java, Python, JavaScript, TypeScript, Kotlin, Swift, Go, Ruby, Rust, and Bash. It is designed to provide a visually appealing representation of PseudoCode in various code editors that support TextMate language grammars.
+
+## Installation
+
+To use this syntax highlighter, follow these steps:
+
+1. Download the `tmlanguage.json` and `configuration.json` files.
+2. Install a code editor that supports TextMate language grammars, such as Visual Studio Code.
+3. Copy the contents of `tmlanguage.json` into a new language configuration file in your editor.
+4. Copy the contents of `configuration.json` into the editor's configuration settings.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Syntax Highlighting
 
-For example if there is an image subfolder under your extension project workspace:
+- Supports highlighting for comments, keywords, strings, numbers, booleans, variables, and storage modifiers.
+- Recognizes common programming constructs such as loops, conditionals, functions, classes, interfaces, and structs.
 
-\!\[feature X\]\(images/feature-x.png\)
+### Comment Styles
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Single-line comments: `// comment`
+- Block comments: `/* block comment */`
 
-## Requirements
+### Brackets and Auto-Closing Pairs
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Recognizes various brackets and auto-closes them during typing.
+  - `{}`, `[]`, `()`, `do` ... `end`
 
-## Extension Settings
+### Surrounding Pairs
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- Allows surrounding selections with appropriate pairs.
 
-For example:
+### Word Pattern
 
-This extension contributes the following settings:
+- Defines a word pattern to match variable and function names.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Indentation Rules
 
-## Known Issues
+- Specifies rules for increasing and decreasing indentation based on language constructs.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Usage Example
 
-## Release Notes
+```pseudo
+missNum(arr, n):
+    found = false
+    for i in 0..<n:
+        for j in 0..<arr.len:
+            if i == arr[j]:
+                found = true
+                break
+        
+        if !found:
+            return i
+```
 
-Users appreciate release notes as you update your extension.
+## Contributions
 
-### 1.0.0
+Feel free to contribute by reporting issues or submitting pull requests to improve the syntax highlighter.
 
-Initial release of ...
+## License
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This PseudoCode Syntax Highlighter is licensed under the [MIT License](LICENSE).
