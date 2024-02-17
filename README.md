@@ -46,14 +46,14 @@ To use this syntax highlighter, follow these steps:
 
 ```pseudo
 missNum(arr, n):
-    found = false
+    found = FALSE
     for i in 0..<n:
         for j in 0..<arr.len:
             if i == arr[j]:
-                found = true
+                found = TRUE
                 break
         
-        if !found:
+        if NOT found:
             return i
 ```
 
